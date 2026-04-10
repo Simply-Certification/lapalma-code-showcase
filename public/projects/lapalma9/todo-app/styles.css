@@ -1,0 +1,281 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(assets/lights.jpg);
+  background-repeat: no-repeat;
+  background-size: 2300px;
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+  animation: mymove 5s infinite;
+}
+.form-label {
+  text-decoration: underline;
+  animation: mymove 5s infinite;
+}
+.form-check-label {
+  color: maroon;
+  text-decoration: underline;
+  animation: mymove 5s infinite;
+}
+.form-control {
+  box-shadow: 0 10px 15px maroon;
+}
+.container {
+  max-width: 800px;
+}
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: maroon;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 20px 25px white;
+  color: black;
+  background-color: brown;
+}
+
+.log {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 25px solid maroon;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px white;
+  color: black;
+  font-size: 20px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.icon-card {
+  font-size: 10rem;
+}
+
+.trash {
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 7px 7px 7px maroon;
+  margin: 7px;
+  border-radius: 35%;
+  color: white;
+  background-color: black;
+}
+.trash:hover {
+  margin: 0 5px;
+  color: brown;
+  box-shadow: 7px 7px 7px white;
+  border-radius: 10px;
+}
+
+.pen {
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 7px 7px 7px maroon;
+  margin: 20px;
+  border-radius: 35%;
+  color: white;
+  background-color: black;
+}
+.pen:hover {
+  margin: px;
+  color: brown;
+  box-shadow: 7px 7px 7px white;
+  border-radius: 10px;
+}
+
+.checkBox {
+  width: 35px;
+  height: 35px;
+  box-shadow: 5px 5px 5px maroon;
+  margin: 20px;
+}
+.checkBox:hover {
+  box-shadow: 5px 5px 5px white;
+}
+
+#saveButton {
+  font-size: 2rem;
+  width: 4rem;
+  height: 3rem;
+  box-shadow: 7px 7px 7px maroon;
+  margin: 20px;
+  border-radius: 35%;
+  color: white;
+  background-color: black;
+}
+#saveButton:hover {
+  margin: px;
+  color: black;
+  box-shadow: 7px 7px 7px white;
+  border-radius: 10px;
+}
+#toDoList {
+  color: maroon;
+}
+.button2 {
+  box-shadow: 7px 7px 7px maroon;
+  /* color: white; */
+  background-color: black;
+  border-radius: 10px;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+}
+.button2:hover {
+  margin: 0 5px;
+  color: brown;
+  box-shadow: 7px 7px 7px white;
+  border-radius: 10px;
+}
+.button3 {
+  box-shadow: 0 10px 15px maroon;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  height: 3rem;
+  width: 8rem;
+  font-size: 2rem;
+}
+.button3:hover {
+  margin: 0 5px;
+  color: brown;
+  box-shadow: 7px 7px 7px white;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: darkgray;
+  opacity: 0.9;
+  animation-name: myAnimation;
+  animation-duration: 30s;
+  animation-delay: 2s;
+
+  border: 5px solid maroon;
+  /* animation: mymove 5s infinite; */
+}
+.editform {
+  display: none;
+}
+
+.more{
+  color: maroon;
+}
+
+.more:hover {
+   margin: 0 5px;
+
+}
+/* The overlay (background) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Show the modal */
+.modal-overlay.show {
+  display: block;
+}
+
+/* The modal box */
+.modal-box {
+  background: rgb(10, 10, 10);
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  
+  
+}
+
+.star {
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  animation: twinkle var(--duration) inherit;
+}
+
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.stars {
+  animation: rotate 60s linear infinite;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(150deg);
+  }
+  
+
+}
+
+
+@keyframes myAnimation {
+  0% {
+    background-color: darkgray;
+  }
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: darkgray;
+  }
+  100% {
+    background-color: white;
+  }
+}
+@keyframes mymove {
+  50% {
+    text-decoration-color: maroon;
+  }
+}
+/* @keyframes mymove {
+  50% {border: 15px solid lightblue;}
+} */

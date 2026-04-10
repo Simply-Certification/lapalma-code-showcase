@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="ToDo.css" />
+    
+  </head>
+  <body>
+    <title>To-Do App</title>
+    <main>
+      <div class="container">
+        <div class="creature-grid">
+          <div class="creature-card">
+            <h2 class="creature-name">Add A New Task</h2>
+            <p>
+              This is an interactive To-Do application in which you can add
+              tasks to be completed, tasks that have been completed, and monitor
+              both. Add a new task below. Stay Busy.
+            </p>
+
+            <form id="todoForm">
+              <div class="mb-3">
+                <label for="task" class="form-label">Task Description</label>
+                <input type="text" class="form-control" id="task" required />
+              </div>
+              <div class="mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="dueDate" required />
+              </div>
+              
+              <button type="submit" onclick="addTodo(todoList)">Add Todo</button>
+            </form>
+          </div>
+          <div class="creature-card2">
+            <h2 class="creature-name">To-Do List/Activity Log</h2>
+            <p>Monitor both your unfinished and completed tasks below.</p>
+
+            <div class="card">
+              <div class="card-body">
+                <h2 class="h4 mb-3">Todo List</h2>
+                <ul id="todoList" class="list-group"></ul>
+              </div>
+            </div>
+            <!-- Log Area -->
+            <div class="card mt-4">
+              <div class="card-body">
+                <h2 class="h4 mb-3">Activity Log</h2>
+                <div id="log" class="log"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="parallax1"></div>
+
+    <div
+      style="height: 50px; background-color: rgb(0, 0, 0); font-size: 36px"
+    ></div>
+
+    <div class="parallax2"></div>
+
+    <div
+      style="height: 50px; background-color: rgb(0, 0, 0); font-size: 36px"
+    ></div>
+
+    <div class="parallax3"></div>
+
+    <div
+      style="height: 50px; background-color: rgb(0, 0, 0); font-size: 36px"
+    ></div>
+  </body>
+
+  <script src="axios.js"></script>
+  <script src="particle.js"></script>
+  <script src="ToDo.js"></script>
+  
+  
+</html>

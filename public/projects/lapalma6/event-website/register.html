@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoggieCon</title>
+    <!-- Bootstrap CSS for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (optional) for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   <!-- Navigation will go here -->
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">DoggieCon</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link  btn btn-primary" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary"  href="schedule.html">Schedule</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-white ms-lg-2"
+                href="register.html"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header will go here -->
+    <header class="py-5 text-center bg-primary text-white">
+      <div class="container">
+        <h1 class="display-4">DoggieCon</h1>
+        <p class="lead mb-4">March 15-17, 2026 • Convention Center</p>
+        <a href="register.html" class="btn btn-light btn-lg">Register Now</a>
+      </div>
+    </header>
+    <!-- Main content sections will go here -->
+
+    <!-- Dark/alternate background section -->
+    <section class="py-5 bg-dark">
+      <div class="container ">
+        <form class="col-8 offset-2" data-bs-theme="dark">
+          <div class="mb-3">
+            <label class="form-label text-light">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="name@example.com"
+              name="email"
+            />
+            <div class="form-text">We'll never share your email.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-light" >Password</label>
+            <input type="password" class="form-control"  name="pword"/>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-light">Select an option</label>
+            <select class="form-select" name="dogRelation">
+              <option selected="">How much do you love your dog??</option>
+              <option>He's my fur baby</option>
+              <option>He's my friend</option>
+              <option>He's there, sometimes.</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-light">Give us a story about how your dog changed your life(if your dog hasn't changed your life, is this ~really~ the convention for you?)</label>
+            <textarea class="form-control" rows="3" name="dogStory"></textarea>
+          </div>
+          <div class="mb-3 form-check ">
+            <input class="form-check-input" type="checkbox" id="checkDemo" name="pledged" />
+            <label class="form-check-label text-light" for="checkDemo"
+              >I pledge alliegence to dog nation</label
+            >
+          </div>
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="dogSize"
+                id="r1"
+                checked=""
+              />
+              <label class="form-check-label text-light" for="r1"
+                >Big dog</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="dogSize"
+                id="r2"
+              />
+              <label class="form-check-label text-light" for="r2"
+                >Little dog</label
+              >
+            </div>
+          </div>
+          <div class="mb-3 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switchDemo" />
+            <label class="form-check-label text-light" for="switchDemo"
+              >Enable notifications</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary ">Submit</button>
+        </form>
+      </div>
+    </section>
+
+   <!-- Footer will go here -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>DoggieCon</h5>
+            <p class="text-muted">Dogs and people, doin' stuff.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <h5>Contact</h5>
+            <p class=" mb-0">BigDog@thepound.com</p>
+          </div>
+        </div>
+        <hr class="my-3" />
+        <p class="text-center text-muted mb-0">
+          &copy; 2026 DoggieCon. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle for Restricted Environment -->
+    <script src="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

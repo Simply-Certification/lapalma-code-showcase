@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>venue</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="jumpman">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">&#129341; Beat The Heat!! &#128293;</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.html">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="performers.html">performers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="venue.html">Venue</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-primary text-white ms-lg-2" href="register.html">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  <header class="py-5 text-center text-white">
+  <div class="container">
+    <h1 class="display-4">&#128293; Beat The Heat!! &#128293;</h1>
+    <p>Pool Party </p>
+    <p class="lead mb-4">March 15-17, 2026 • Tucson Convention Center</p>
+    <a href="register.html" class="btn btn-light btn-lg">Register Now</a>
+  </div>
+</header>
+
+  
+  <!-- <section class="py-5"> 
+  <div class="container">
+    <h2 class="mb-4">Section Title</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Come on out and Beat The Heat! summers fun pool partys and concerts.</p>
+      </div>
+      <div class="col-md-6">
+        <p>More content in the second column.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<div class="container mt-3">
+  <h2></h2>
+  <form action="/action_page.php">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+      <label class="form-check-label text-white" for="mySwitch" >Dark Mode</label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
+
+
+<section id="venue-map" class="container mb-5">
+      <h2 class="section-title text-white">Venue Layout</h2>
+      <!-- Floors Navigation Tabs -->
+      <ul class="nav nav-tabs mb-4" id="venueTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="ground-tab"
+            data-bs-toggle="tab"
+            href="#ground-floor"
+            role="tab"
+            >Day 1</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="first-tab"
+            data-bs-toggle="tab"
+            href="#first-floor"
+            role="tab"
+            >Day 2</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="second-tab"
+            data-bs-toggle="tab"
+            href="#second-floor"
+            role="tab"
+            >Day 3</a
+          >
+        </li>
+      </ul>
+      <!-- Tab Content - Floor Maps -->
+      <div class="tab-content" id="venueTabContent">
+        <!-- Ground Floor -->
+        <div
+          class="tab-pane fade show active"
+          id="ground-floor"
+          role="tabpanel"
+        >
+          <div class="map-container">
+            <img
+              src="assets/grandhotel.jpg"
+              alt="Ground Floor Map"
+              class="img-fluid"
+            />
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Ground Floor Facilities</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Main Entrance & ticket booth</li>
+                <li class="list-group-item">pools</li>
+                <li class="list-group-item">Dining Hall & Catering</li>
+                <li class="list-group-item">Networking Lounge A</li>
+                <li class="list-group-item">v.i.p tables</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Amenities</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Information Desk</li>
+                <li class="list-group-item">towel rack and floaties</li>
+                <li class="list-group-item">Restrooms</li>
+                <li class="list-group-item">drink dispensers</li>
+                <li class="list-group-item">First Aid Station</li>
+                <li class="list-group-item">food truck "Everythings Fried"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- First Floor -->
+        <div class="tab-pane fade" id="first-floor" role="tabpanel">
+          <div class="map-container">
+            <img
+              src="assets/luxhotel.jpg"
+              alt="First Floor Map"
+              class="img-fluid"
+            />
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>First Floor Facilities</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  Main Auditorium and ticket booth
+                </li>
+                <li class="list-group-item">pool with waterfall</li>
+                <li class="list-group-item">stages</li>
+                <li class="list-group-item">Ballroom</li>
+                <li class="list-group-item">Press Room</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Amenities</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Restrooms</li>
+                <li class="list-group-item">Charging Stations</li>
+                <li class="list-group-item">Water Fountains</li>
+                <li class="list-group-item">beer dispensers</li>
+                <li class="list-group-item">Tech Support Desk</li>
+                <li class="list-group-item">food truck "Everythings Fried"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Second Floor -->
+        <div class="tab-pane fade" id="second-floor" role="tabpanel">
+          <div class="map-container">
+            <img
+              src="assets/beachfront.jpg"
+              alt="Second Floor Map"
+              class="img-fluid"
+            />
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Second Floor Facilities</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">ticket booth</li>
+                <li class="list-group-item">beachfront loung chairs</li>
+                <li class="list-group-item">jetski and boat rental</li>
+                <li class="list-group-item">Outdoor Terrace</li>
+                <li class="list-group-item">VIP Lounge</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Amenities</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Restrooms</li>
+                <li class="list-group-item">cabana bar</li>
+                <li class="list-group-item">unberlla lounges</li>
+                <li class="list-group-item">sand shower</li>
+                <li class="list-group-item">food truck "Everythings Fried"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="assets/grandhotel.jpg"
+            class="d-block w-100"
+            alt="Slide 1" />
+          <div class="carousel-caption">
+            <!-- <h5>First Slide</h5>
+            <p>Description for the first slide.</p> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/hotels.jpg"
+            class="d-block w-100"
+            alt="Slide 2" />
+          <div class="carousel-caption">
+            <!-- <h5>Second Slide</h5>
+            <p>Description for the second slide.</p> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/luxhotel.jpg"
+            class="d-block w-100"
+            alt="Slide 3" />
+          <div class="carousel-caption text-warning">
+            <!-- <h5>Third Slide</h5>
+            <p>Description for the third slide.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev">
+        <i class="bi bi-chevron-left"></i>
+        <span>Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next">
+        <i class="bi bi-chevron-right"></i>
+        <span>Next</span>
+      </button>
+    </div>
+
+  
+  <footer class="py-4 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5> &#128293; Beat The Heat &#128293;</h5>
+        <p>Pool partys and concerts!</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <h5>Contact</h5>
+        <p>DBOY3207@gmail.com</p>
+      </div>
+    </div>
+    <hr class="my-3">
+    <p class="text-center">&copy; 2026 Beat The Heat. All rights reserved.</p>
+  </div>
+</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

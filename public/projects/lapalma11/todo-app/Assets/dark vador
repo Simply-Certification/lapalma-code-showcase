@@ -1,0 +1,531 @@
+// Game State
+let playerHP = 100;
+let playerMaxHP = 100;
+let enemyHP = 50;
+let enemyMaxHP = 50;
+let currentEnemy = 0;
+let score = 0;
+let streak = 0;
+let bestStreak = 0;
+// let currentQuestion = null;
+let currentMove = null;
+
+let moveSelected = 0;
+let enemiesDefeated = 0;
+
+///////////////////////////////// Enemies ///////////////////////////////////////////////
+const enemies = [
+  { name: "Zombie", sprite: "\u{1F9DF}", hp: 100, damage: 10, topic: "basics" },
+  {
+    name: "Zombie's Bro",
+    sprite: "\u{1F9DF}",
+    hp: 100,
+    damage: 15,
+    topic: "basics",
+  },
+  {
+    name: "Zombie Cuzin",
+    sprite: "\u{1F9DF}",
+    hp: 90,
+    damage: 18,
+    topic: "basics",
+  },
+  {
+    name: "Zombie Unc",
+    sprite: "\u{1F92C}",
+    hp: 120,
+    damage: 22,
+    topic: "basics",
+  },
+  {
+    name: "Zombie Ghost",
+    sprite: "\u{1F47B}",
+    hp: 150,
+    damage: 26,
+    topic: "basics",
+  },
+];
+
+//////////////////// Move Bank - ////////////////////////
+const questions = {
+  basics: [
+    // What will you do next??
+    {
+      question: "What will you do next??",
+      answers: ["Attack", "Heal", "Combo Attack", "Special Attack"],
+      correct: 0,
+      explanation: "You took Damage!!!!",
+    },
+  ],
+  mixed: [
+  {
+      question: "What will you do next??",
+      answers: ["Attack", "Heal", "Combo Attack", "Special Attack"],
+      correct: 0,
+      explanation: "You took Damage!!!!",
+    },
+  ],
+};
+
+//////////////////////// DOM Elements////////////////////////////////////////
+const startScreen = document.getElementById("start-screen");
+const gameScreen = document.getElementById("game-screen");
+const gameoverScreen = document.getElementById("gameover-screen");
+const playerHPBar = document.getElementById("player-hp-bar");
+const playerHPText = document.getElementById("player-hp-text");
+const enemyHPBar = document.getElementById("enemy-hp-bar");
+const enemyHPText = document.getElementById("enemy-hp-text");
+const enemyMaxHPText = document.getElementById("enemy-max-hp");
+const enemyName = document.getElementById("enemy-name");
+const enemySprite = document.getElementById("enemy-sprite");
+const playerSprite = document.getElementById("player-sprite");
+const questionText = document.getElementById("question-text");
+const codeBlock = document.getElementById("code-block");
+const topicBadge = document.getElementById("topic-badge");
+const movesGrid = document.getElementById("moves-grid");
+const resultMessage = document.getElementById("result-message");
+const nextBtn = document.getElementById("next-btn");
+const scoreDisplay = document.getElementById("score");
+const streakDisplay = document.getElementById("streak");
+const battleArena = document.getElementById("battle-arena");
+
+function startGame() {
+  startScreen.classList.add("hidden");
+  gameScreen.classList.remove("hidden");
+  gameoverScreen.classList.add("hidden");
+
+  playerHP = 100;
+  currentEnemy = 0;
+  score = 0;
+  streak = 0;
+  bestStreak = 0;
+  enemiesDefeated = 0;
+
+  loadEnemy();
+  loadQuestion();
+  updateUI();
+}
+
+function loadEnemy() {
+  const enemy = enemies[currentEnemy];
+  enemyMaxHP = enemy.hp;
+  enemyHP = enemy.hp;
+  enemyName.textContent = enemy.name;
+  enemySprite.textContent = enemy.sprite;
+  enemyMaxHPText.textContent = enemy.hp;
+  updateUI();
+}
+
+function getQuestionForEnemy() {
+  const enemy = enemies[currentEnemy];
+  let pool;
+
+  if (enemy.topic === "mixed") {
+    // Final boss - mix of all topics
+    const allTopics = [
+      "basics",
+      "structure",
+      "attributes",
+      "semantic",
+      "mixed",
+    ];
+    const randomTopic = allTopics[Math.floor(Math.random() * allTopics.length)];
+    pool = questions[randomTopic];
+  } else {
+    pool = questions[enemy.topic];
+  }
+
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function loadQuestion() {
+  currentMove = getQuestionForEnemy();
+  const enemy = enemies[currentEnemy];
+
+  // Set topic badge
+  const topicNames = {
+    basics: "Level 1",
+    structure: "Level 2",
+    attributes: "Links, Images & Attributes",
+    semantic: "Semantic HTML & Lists",
+    mixed: "Final Boss",
+  };
+  topicBadge.textContent =
+    enemy.topic === "mixed" ? "Final Boss - Mixed" : topicNames[enemy.topic];
+
+  questionText.textContent = currentMove.question;
+
+  // Handle code block
+  if (currentMove.code) {
+    codeBlock.textContent = currentMove.code;
+    codeBlock.classList.remove("hidden");
+  } else {
+    codeBlock.classList.add("hidden");
+  }
+
+  // Clear and populate answers
+  movesGrid.innerHTML = "";
+  currentMove.answers.forEach((answer, index) => {
+    const btn = document.createElement("button");
+    btn.className = "answer-btn";
+    btn.textContent = answer;
+    btn.onclick = () => selectAnswer(index);
+    movesGrid.appendChild(btn);
+  });
+
+  resultMessage.classList.add("hidden");
+  nextBtn.classList.add("hidden");
+}
+
+function selectAnswer(index) {
+  const buttons = movesGrid.querySelectorAll(".answer-btn");
+  buttons.forEach((btn) => (btn.disabled = true));
+
+  const isCorrect = index === currentMove.correct;
+
+  buttons[index].classList.add(isCorrect ? "correct" : "incorrect");
+  if (!isCorrect) {
+    buttons[currentMove.correct].classList.add("correct");
+  }
+
+  if (isCorrect) {
+    handleCorrectAnswer();
+  } else {
+    handleWrongAnswer();
+  }
+
+  moveSelected++;
+  updateUI();
+
+  // Check for game over or enemy defeated
+  setTimeout(() => {
+    if (playerHP <= 0) {
+      showGameOver(false);
+    } else if (enemyHP <= 0) {
+      enemiesDefeated++;
+      if (currentEnemy >= enemies.length - 1) {
+        showGameOver(true);
+      } else {
+        showEnemyDefeated();
+      }
+    } else {
+      nextBtn.classList.remove("hidden");
+    }
+  }, 800);
+}
+
+function handleCorrectAnswer() {
+  streak++;
+  if (streak > bestStreak) bestStreak = streak;
+
+  // Calculate damage (base 20 + streak bonus)
+  let damage = 20 + streak * 3;
+  let isCritical = false;
+
+  // Critical hit chance at high streaks
+  if (streak >= 3 && Math.random() < 0.3) {
+    damage = Math.floor(damage * 1.5);
+    isCritical = true;
+  }
+
+  enemyHP = Math.max(0, enemyHP - damage);
+  score += 100 + streak * 25;
+
+  // Animations
+  playerSprite.style.animation = "attack-right 0.3s";
+  setTimeout(() => {
+    enemySprite.style.animation = "damage-shake 0.3s";
+    showDamageNumber(damage, "dealt", isCritical);
+  }, 150);
+
+  setTimeout(() => {
+    playerSprite.style.animation = "";
+    enemySprite.style.animation = "";
+  }, 500);
+
+  // Streak bonus notification
+  if (streak >= 3) {
+    showStreakBonus(streak);
+  }
+
+  resultMessage.className = "result-message victory";
+  resultMessage.innerHTML = isCritical
+    ? "<strong>&#9889; CRITICAL HIT!</strong> You dealt " +
+      damage +
+      " damage!<br><em>" +
+      currentMove.explanation +
+      "</em>"
+    : "<strong>&#10003; Correct!</strong> You dealt " +
+      damage +
+      " damage!<br><em>" +
+      currentMove.explanation +
+      "</em>";
+  resultMessage.classList.remove("hidden");
+}
+
+function handleWrongAnswer() {
+  streak = 0;
+  const enemy = enemies[currentEnemy];
+  const damage = enemy.damage;
+
+  playerHP = Math.max(0, playerHP - damage);
+
+  // Animations
+  enemySprite.style.animation = "attack-left 0.3s";
+  setTimeout(() => {
+    playerSprite.style.animation = "damage-shake 0.3s";
+    showDamageNumber(damage, "taken", false);
+  }, 150);
+
+  setTimeout(() => {
+    playerSprite.style.animation = "";
+    enemySprite.style.animation = "";
+  }, 500);
+
+  resultMessage.className = "result-message defeat";
+  resultMessage.innerHTML =
+    "<strong>&#10007; Wrong!</strong> " +
+    enemy.name +
+    " dealt " +
+    damage +
+    " damage to you!<br><em>" +
+    currentMove.explanation +
+    "</em>";
+  resultMessage.classList.remove("hidden");
+}
+
+function showDamageNumber(amount, type, isCritical) {
+  const dmgEl = document.createElement("div");
+  dmgEl.className = `damage-number damage-${type}${
+    isCritical ? " critical-hit" : ""
+  }`;
+  dmgEl.textContent = `-${amount}`;
+  battleArena.appendChild(dmgEl);
+
+  setTimeout(() => dmgEl.remove(), 1000);
+}
+
+function showStreakBonus(streakCount) {
+  const bonusEl = document.createElement("div");
+  bonusEl.className = "streak-bonus";
+  bonusEl.textContent = "\u{1F525} " + streakCount + "x Streak Bonus!";
+  battleArena.appendChild(bonusEl);
+
+  setTimeout(() => bonusEl.remove(), 1500);
+}
+
+function showEnemyDefeated() {
+  resultMessage.className = "result-message victory";
+  resultMessage.innerHTML =
+    "<strong>&#127881; Enemy Defeated!</strong> " +
+    enemies[currentEnemy].name +
+    " has been vanquished!";
+  resultMessage.classList.remove("hidden");
+
+  nextBtn.textContent = "Next Enemy →";
+  nextBtn.classList.remove("hidden");
+  nextBtn.onclick = () => {
+    currentEnemy++;
+    loadEnemy();
+    loadQuestion();
+    nextBtn.textContent = "Continue";
+    nextBtn.onclick = nextQuestion;
+  };
+}
+
+function nextQuestion() {
+  loadQuestion();
+}
+
+function updateUI() {
+  playerHPBar.style.width = `${(playerHP / playerMaxHP) * 100}%`;
+  playerHPText.textContent = playerHP;
+
+  enemyHPBar.style.width = `${(enemyHP / enemyMaxHP) * 100}%`;
+  enemyHPText.textContent = enemyHP;
+
+  scoreDisplay.textContent = score;
+  streakDisplay.textContent = streak;
+}
+
+function showGameOver(victory) {
+  gameScreen.classList.add("hidden");
+  gameoverScreen.classList.remove("hidden");
+
+  const title = document.getElementById("gameover-title");
+  const stats = document.getElementById("final-stats");
+
+  if (victory) {
+    title.textContent = "\u{1F3C6} Victory!";
+    title.className = "game-over-title victory";
+  } else {
+    title.textContent = "\u{1F480} Defeated";
+    title.className = "game-over-title defeat";
+  }
+
+  stats.innerHTML = `
+                Enemies Defeated: <span>${enemiesDefeated}</span><br>
+                Final Score: <span>${score}</span><br>
+                Best Streak: <span>${bestStreak}</span><br>
+                Moves Made: <span>${moveSelected}</span>
+            `;
+}
+///////////////// Run ButtoN//////////////////////
+
+function showGameOver2(defeated) {
+  gameScreen.classList.add("hidden");
+  gameoverScreen.classList.remove("hidden");
+
+  const title = document.getElementById("gameover-title");
+  title.textContent = "\u{1F571} Defeated";
+  title.className = "game-over-title defeat";
+}
+
+function restartGame() {
+  moveSelected = 0;
+  startGame();
+}
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+
+
+const user = {
+  name:
+
+"Player 1",
+    life: 100,
+    attack: 20,
+    heal: 20,
+    potions: 3,
+    xp: 0,
+    level: 1
+};
+
+///////////////// User Functions ///////////////////////
+function userAttack() {
+  let totalDamage = 0;
+  let comboLog = "userAttack: ";
+
+  if(Math.random() < (1/3)){
+    logAction("Missed Hit Zombie");
+
+
+
+    
+    return;
+  }
+
+  // Calculate damage
+  let damage = Math.floor(Math.random() * user.attack) + 15;
+  totalDamage += damage;
+   comboLog += "Zombie hit with damage - " + damage;
+
+  // Apply damage to zombie
+  zombie.life -= damage;
+
+    if(zombie.life > 0){
+        //is he still alive? - Yes
+        updateUI(comboLog);
+        attackUser();
+
+    }else{
+        //no, he's dead
+        updateUI(comboLog);
+        gameOver();
+    }
+
+  let zombieLife = document.getElementById("zombieLife");
+  zombieLife.textContent = zombie.life;
+
+  // Update UI and log action
+  updateGameDisplay();
+  logAction(`Player attacks for ${damage} damage!`);
+}
+
+function userHeal() {
+    
+}
+
+function usePotion() {
+  
+}
+
+function specialAttack() {
+    
+}
+
+function comboAttack() {
+
+}
+    
+
+
+///////////////////////////////////////////////////////
+
+// Zombie object - Enemy character with defensive abilities
+const zombie = {
+    name: "Zombie",
+    life: 150,
+    attack: 8
+};
+
+////////////////// Zombie Functions //////////////////////////
+
+function attackUser(){
+    let totalDamage = 0;
+    let comboLog = "attackUser: ";
+
+if(Math.random() < (1/3)){
+    logAction("Missed attack player");
+
+
+
+    
+    return;
+}
+
+ let damage = Math.floor(Math.random() * zombie.attack) + 15;
+  totalDamage += damage;
+   comboLog += "Player hit with damage - " + damage;
+
+  // Apply damage to user
+  user.life -= damage;
+
+    if(user.life > 0){
+        //is he still alive? - Yes
+        updateUI(comboLog);
+        attackUser();
+
+    }else{
+        //no, he's dead
+        updateUI(comboLog);
+        gameOver();
+    }
+
+  let userLife = document.getElementById("userLife");
+  userLife.textContent = user.life;
+
+  // Update UI and log action
+  updateGameDisplay();
+  logAction(`Player attacks for ${damage} damage!`);
+
+}
+//////////////////////////////////////////////////////////////
+
+// Core game functions
+function updateUI(message) {
+    // Logic to update user and zombie stats on page
+    let zombieLife = document.getElementById("zombieLife");
+    zombieLife.textContent = zombie.life;
+
+    logAction(message);
+}
+
+function logAction(message) {
+    const timestamp = new Date().toLocaleTimeString();
+    const logEntry = `[${timestamp}] ${message}`;
+    let logbox = document.getElementById("log");
+    let newmessage = document.createElement("p");
+    newmessage.textContent = logEntry;
+    logbox.appendChild(newmessage);
+    logbox.scrollTop = logbox.scrollHeight;
+}

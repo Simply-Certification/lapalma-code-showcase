@@ -1,0 +1,53 @@
+body {
+    
+    font-family: lobster;
+    
+}
+
+h2{
+
+    font-family: lobster;
+}
+
+div {
+
+    font-family: lobster;
+}
+
+#venuebody {
+    background-image: url(assets/photo-1688148587822-b916061c9fea.jpg);
+    
+    background-size: cover;
+}
+#mainpage {
+    background-image: url(assets/photo-1688148587822-b916061c9fea.jpg);
+    background-size: contain;
+    
+    
+   
+}
+
+.cat{
+    display: block;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+#ticketbutton {
+    
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+@media (max-width:546px) {
+    .iphone {
+        margin: 100px 0;
+    }
+}

@@ -1,0 +1,17 @@
+header {
+  text-align: center;
+  font-size: xx-large;
+  background-image: url("assets/images/hexagon-header.avif");
+  height: 400px;
+  color: white;
+  background-size: cover;
+}
+
+.attendees {
+  width: 100%;
+}
+
+.carousel-item {
+  width: 100%;
+  max-height: 800px;
+}

@@ -1,0 +1,241 @@
+:root {
+  --primary: rgba(247, 4, 4, 0.411);
+  --secondary: rgb(92, 24, 109);
+  --background: rgb(0, 1, 44);
+  --accent: rgba(255, 0, 255, 0.418);
+  --secondary-accent: #0d6efd;
+  --secondary-background: rgb(179, 75, 50);
+}
+
+body {
+  background-color: var(--background);
+  background-image: url(assets/notebook.jpg);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position-y: 10%;
+  background-position-x: center;
+  font-family: "Quicksand";
+}
+.form-check {
+  display: none;
+  color: fuchsia;
+}
+
+h1 {
+  color: var(--accent);
+  text-decoration: underline;
+  text-align: center;
+  text-shadow: 0px 1px 0px aliceblue;
+  /* margin-top: 10%; */
+  margin-bottom: 5%;
+}
+
+h2 {
+  margin-left: 2rem;
+  color: aliceblue !important;
+  display: inline-block;
+  text-shadow: 2px 4px 2px var(--secondary);
+  font-size: 1.5rem !important;
+}
+
+label,
+.theTodo,
+.theDate,
+.isCompleted {
+  color: aliceblue !important;
+  display: inline-block;
+  text-shadow: 2px 4px 2px var(--secondary);
+  font-size: 1.1rem;
+}
+
+h3,
+.h4 {
+  font-size: 1rem;
+}
+
+#task,
+#dueDate,
+#completed,
+.edit-input {
+  background: var(--secondary-background);
+  border: 1px solid var(--accent);
+  color: aliceblue;
+}
+
+.edit-input:focus {
+  background: var(--secondary-background) !important;
+  border: 1px solid var(--accent);
+  outline: none;
+}
+
+.edit-input {
+  margin: 0 1rem;
+  color: aliceblue;
+}
+li {
+  margin-left: 2rem;
+}
+/* #task:focus, #task:active {
+    background-color: var(--secondary-background) !important;
+}
+
+.form-control:focus {
+    background-color: var(--secondary-background) !important;
+} */
+
+/* input[type="date"] {
+  background-color: var(--secondary-background);
+} */
+
+.edit-btn,
+.delete-btn {
+  color: white;
+  margin: 2%;
+  border-radius: 50%;
+  padding: 3px;
+  letter-spacing: 0.15rem;
+}
+
+.edit-btn {
+  background: var(--secondary-accent);
+
+  border: 1px solid var(--background);
+}
+
+.edit-btn:hover {
+  background-color: #0b5ed7;
+
+  scale: 115%;
+}
+
+.delete-btn {
+  background: var(--accent);
+
+  border: 1px solid var(--background);
+}
+
+.delete-btn:hover {
+  background-color: fuchsia;
+
+  scale: 115%;
+}
+
+.container {
+  border-radius: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: var(--secondary);
+  background-image: url(assets/workbench.jpg);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position-y: 85%;
+  background-position-x: center;
+  max-width: 800px;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  opacity: 95%;
+}
+
+.card {
+  background: var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.log {
+  
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid var(--accent);
+  padding: 10px;
+  background-color: var(--background);
+  border-radius: 5px;
+  color: var(--accent) !important;
+  /* display: inline-block; */
+  text-shadow: 1px 0px 1px aliceblue;
+  font-size: 1.25rem;
+  opacity: 75%;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  color: var(--secondary-background);
+}
+
+.btn {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+footer {
+  background: var(--primary);
+  color: var(--accent);
+  text-shadow: 1px 0px 1px aliceblue;
+  /* font-size: 1rem; */
+  margin-top: 20% !important;
+  margin-bottom: 2% !important;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#myModal {
+  display: none;
+  position: absolute;
+  left: 10vw;
+  right: 10vw;
+  top: 10vh;
+  bottom: 10vh;
+  z-index: 1000;
+}
+
+flatpickr-day {
+  background-color: #ffc107;
+}
+
+.flatpickr-innerContainer {
+  background-color: var(--primary);
+}
+
+.flatpickr-weekdays {
+  background-color: var(--secondary) !important;
+  border: 0.5px solid aliceblue !important;
+}
+
+span.flatpickr-weekday {
+  color: aliceblue !important;
+}
+
+.flatpickr-days {
+  color: var(--primary) !important;
+}
+
+.flatpickr-day.selected {
+  background: var(--primary);
+  border-color: var(--secondary);
+}
+
+.flatpickr-day.selected:hover {
+  background: var(--accent);
+}
+
+.flatpickr-months {
+  background: var(--accent) !important;
+}
+
+.flatpickr-monthDropdown-months {
+  background: var(--accent) !important;
+  border-radius: 50% !important;
+  border: 0.5px solid var(--accent) !important;
+}
+
+.flatpickr-monthDropdown-month:hover {
+  background: var(--primary) !important;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone</title>
+    <!-- Bootstrap CSS for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (optional) for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-secondary">
+    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Register</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="venue.html">Venue</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-white ms-lg-2"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<header class="mx-auto text-center mb-5 mt-5">
+      <div class="container">
+        <h1 class="display-2 bg-info text-dark rounded opacity-75">
+          Save The Love
+        </h1>
+        <p class="lead mb-2 text-dark bg-info opacity-75 w-50 mx-auto">
+          March 13-15, 2026 • Convention Center
+        </p>
+      </div>
+    </header>
+
+    <section class="mt-5 mb-5 bg-light w-75 mx-auto p-3">
+      <h1 class="mb-3 text-center text-info"><u>Please Register Here</u></h1>
+      <div class="form-floating mt-5 mb-3 ms-5 w-50">
+        <input
+          type="name"
+          class="form-control"
+          id="floatingName"
+          placeholder="Your Name"
+          required
+        />
+        <label for="floatingName">Your Name</label>
+      </div>
+      <div class="form-floating mb-3 ms-5 w-50">
+        <input
+          type="email"
+          class="form-control"
+          id="floatingEmail"
+          placeholder="name@example.com"
+        />
+        <label for="floatingEmail">Email address</label>
+      </div>
+      <div class="form-floating mb-3 ms-5 w-50">
+        <input
+          type="tel"
+          class="form-control"
+          id="floatingTel"
+          placeholder="555-555-555"
+        />
+        <label for="floatingTel">Phone Number</label>
+      </div>
+    </section>
+
+    <section class="mt-5 mb-5 bg-light w-75 mx-auto p-3">
+      <!-- Color Picker -->
+      <p class="ms-5 text-muted">Choose your own color:</p>
+      <input
+        type="color"
+        class="form-control form-control-color ms-5 mb-4"
+        value="#CCCCCC"
+      />
+      <!-- Checkboxes -->
+      <div class="mb-3 ms-5">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="check1" checked />
+          <label class="form-check-label" for="check1">Remember me</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="check2" />
+          <label class="form-check-label" for="check2"
+            >Subscribe to newsletter</label
+          >
+        </div>
+      </div>
+
+      <!-- Radio buttons -->
+      <div class="mb-3 ms-5">
+        <label class="form-label">Preferred contact method</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="contact"
+            id="contactEmail"
+            checked
+          />
+          <label class="form-check-label" for="contactEmail">Email</label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="contact"
+            id="contactPhone"
+          />
+          <label class="form-check-label" for="contactPhone">Phone</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">Password</label> -->
+    <section class="mt-5 mb-5 bg-light w-75 mx-auto p-3">
+      <div class="form-floating mb-3 ms-5 w-50">
+        <form action="/action_page.php" class="was-validated">
+          <div class="mb-3 mt-3">
+            <label for="uname" class="form-label">Username:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="uname"
+              placeholder="Enter username"
+              name="uname"
+              required
+            />
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="pwd"
+              placeholder="Enter password"
+              name="pswd"
+              required
+            />
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="myCheck"
+              name="remember"
+              required
+            />
+            <label class="form-check-label" for="myCheck"
+              >I agree on blabla.</label
+            >
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <h2 class="section-title">Choose Your Ticket</h2>
+      <div class="row">
+        <!-- Standard Ticket -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card ticket-card standard-ticket h-100">
+            <div class="ticket-header text-center">
+              <h3
+                class="border border-1 border-info bg-secondary mt-3 ms-1 me-1 text-info"
+              >
+                Standard Pass
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="ticket-price text-center mb-3">
+                <span class="original-price mb-3">$799</span>
+              </div>
+
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Full Conference Access
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Welcome Reception
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Lunch & Refreshments
+                </li>
+                <li class="mb-2 feature-excluded">Workshop Access</li>
+                <li class="mb-2 feature-excluded">Conference Dinner</li>
+                <li class="mb-2 feature-excluded">VIP Personal Sessions</li>
+              </ul>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#registration-form" class="btn btn-outline-primary"
+                >Select</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Premium Ticket -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div
+            class="card ticket-card premium-ticket featured h-100 position-relative"
+          >
+            <div class="badge-early">MOST POPULAR</div>
+            <div class="ticket-header text-center">
+              <h3
+                class="border border-1 border-info bg-primary ms-1 me-1 text-info"
+              >
+                Premium Pass
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="ticket-price text-center mb-3">
+                <span class="original-price mb-3">$1,199</span>
+              </div>
+
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Full Conference Access
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Welcome Reception
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Lunch & Refreshments
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Workshop Access (2)
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Conference Dinner
+                </li>
+                <li class="mb-2 feature-excluded">VIP Personal Sessions</li>
+              </ul>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#registration-form" class="btn btn-primary">Select</a>
+            </div>
+          </div>
+        </div>
+        <!-- VIP Ticket -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card ticket-card vip-ticket h-100">
+            <div class="ticket-header text-center">
+              <h3
+                class="border border-1 border-info bg-warning mt-3 ms-1 me-1 text-primary"
+              >
+                VIP Pass
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="ticket-price text-center mb-3">
+                <span class="original-price mb-3">$1,699</span>
+              </div>
+
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Full Conference Access
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Welcome Reception
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Lunch & Refreshments
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Unlimited Workshops
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Conference Dinner
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> VIP Personal Sessions
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#registration-form" class="btn btn-outline-primary"
+                >Select</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Workshop Pass -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card ticket-card workshop-pass h-100">
+            <div class="ticket-header text-center">
+              <h3 class="border border-1 border-info mt-3 ms-1 me-1 text-info">
+                Workshop Only
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="ticket-price text-center mb-3">
+                <span class="original-price mb-3">$499</span>
+              </div>
+
+              <ul class="list-unstyled">
+                <li class="mb-2 feature-excluded">Full Conference Access</li>
+                <li class="mb-2 feature-excluded">Welcome Reception</li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Lunch & Refreshments
+                </li>
+                <li class="mb-2">
+                  <span class="feature-icon">✓</span> Unlimited Workshops
+                </li>
+                <li class="mb-2 feature-excluded">Conference Dinner</li>
+                <li class="mb-2 feature-excluded">VIP Personal Sessions</li>
+              </ul>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#registration-form" class="btn btn-outline-primary"
+                >Select</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6 mx-auto">
+          <div class="alert alert-info text-center">
+            <strong>Group Discounts:</strong> Register 3+ couples and get 15%
+            off. Contact
+            <a href="mailto:groups@techfest2026.com">groups@techfest2026.com</a>
+            for details.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-5 mb-1 p-4 bg-dark text-info">
+      <h3><u>Contact Us:</u></h3>
+      <div class="row w-50 mb-3 mx-auto mt-3">
+        <div class="col mb-3">
+          <button class="btn btn-light">
+            <p class="bi-twitter text-primary text-center h4"></p>
+          </button>
+        </div>
+        <div class="col mb-3">
+          <button class="btn btn-light">
+            <p class="bi-instagram text-warning text-center h4"></p>
+          </button>
+        </div>
+        <div class="col mb-3">
+          <button class="btn btn-light">
+            <p class="bi-linkedin text-info text-center h4"></p>
+          </button>
+        </div>
+        <div class="col mb-3">
+          <button class="btn btn-light">
+            <p class="bi-google text-danger text-center h4"></p>
+          </button>
+        </div>
+        <div class="col mb-3">
+          <button class="btn btn-light">
+            <p class="bi-facebook text-primary text-center h4"></p>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle for Restricted Environment -->
+    <script src="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

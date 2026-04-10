@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working Hard/Register</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #main-header {
+        background-image: url(background.jpg);
+        background-size: cover;
+      }
+      #social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(28, 136, 237, 0.837);
+        text-decoration: none;
+        color: rgb(234, 236, 245);
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: white;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        #sponsors {
+          display: grid !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation will go here -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          >Working Hard In The Big Easy</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="venue.html">Venue</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-white ms-lg-2"
+                href="register.html"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header will go here -->
+    <header class="py-5 text-center bg-primary text-white" id="main-header">
+      <div class="container">
+        <h1 class="display-4">WORKING HARD IN THE BIG EASY!</h1>
+        <p class="lead mb-4">March 15-17, 2024 • Convention Center</p>
+        <p class="lead mb-4 display-4">Registration</p>
+      </div>
+    </header>
+
+    <!-- Main content sections will go here -->
+
+    <img class="mx-auto d-block" src="user.png" alt="none" />
+
+    <form class="container">
+      <div class="mb-3">
+        <div>
+          <input
+            class="border"
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+          />
+          <input
+            class="border"
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+          />
+        </div>
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Confirm Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Check to recieve newsletters</label
+        >
+      </div>
+      <!-- Text Input -->
+      <input type="text" class="form-control" placeholder="Street Address" />
+      <input type="number" class="form-control" placeholder="Phone Number" />
+
+      <!-- File Input -->
+      Upload Resume
+      <input class="form-control" type="file" />
+
+      <!-- Select -->
+      <select class="form-select">
+        <option selected>Reason For Attending</option>
+        <option value="1">Looking For a job</option>
+        <option value="2">Job recruiter</option>
+        <option value="3">Career Advacement</option>
+        <option value="4">Bored and have nothing better to do.</option>
+      </select>
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+        style="margin-top: 30px; margin-bottom: 30px"
+      >
+        Submit
+      </button>
+    </form>
+
+    <!-- Footer will go here -->
+
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Working Hard In The Big Easy</h5>
+            <p class="text-white">
+              Job fair and career opportunities found nowhere else.
+            </p>
+          </div>
+
+          <div class="col-md-6 text-md-end">
+            <h5>Contact</h5>
+            <p class="text-white mb-0">info@workinghardinthebigeasy.com</p>
+          </div>
+        </div>
+        <hr class="my-3" />
+      </div>
+      <p class="d-flex justify-content-center">Sponsors</p>
+      <div class="d-flex justify-content-center" id="sponsors">
+        <img src="sponsor01.png" alt="none" />
+        <br />
+        <img src="sponsor02.png" alt="none" />
+        <br />
+        <img src="sponsor03.png" alt="none" />
+        <br />
+        <img src="sponsor04.png" alt="none" />
+        <br />
+        <img src="sponsor05.png" alt="none" />
+      </div>
+      <p class="text-center text-white">Follow us on Social Media</p>
+      <div class="d-flex justify-content-center" id="social-links">
+        <a href="#" class="social-link"
+          ><img
+            src="https://simplycodingcourses.com/images/social-websites/svg/twitter-logo.svg"
+        /></a>
+        <a href="#" class="social-link"
+          ><img
+            src="https://simplycodingcourses.com/images/social-websites/svg/reddit-logo.svg"
+        /></a>
+        <a href="#" class="social-link"
+          ><img
+            src="https://simplycodingcourses.com/images/social-websites/svg/myspace-logo.svg"
+        /></a>
+        <a href="#" class="social-link"
+          ><img
+            src="https://simplycodingcourses.com/images/social-websites/svg/facebook-logo.svg"
+        /></a>
+      </div>
+      <hr class="my-3" />
+
+      <p class="text-center text-white mb-0">
+        &copy; 2026 Working Hard in The Big Easy. All rights reserved.
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

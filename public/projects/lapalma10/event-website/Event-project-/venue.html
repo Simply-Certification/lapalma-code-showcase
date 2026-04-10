@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey Hotels Grand opening</title>
+ <link href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons (optional) for Restricted Environment -->
+<link href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <!-- Navigation will go here -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+       <a class="navbar-brand" href="index.html">Journey Hotels</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="venue.html">Venue</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<button
+  class="navbar-toggler"
+  type="button active"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarNav"
+>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Journey Hotels</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="speakers.html">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="venue.html">Venue</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+
+      <!-- Header will go here -->
+      <section class="venue-map active " class="container mb-4 bg-primary">
+        <h2 class="section-title">Venue Layout</h2>
+        <!-- Floors Navigation Tabs -->
+        <ul class="nav nav-tabs mb-4 Dark" id="venueTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="ground-tab"
+              data-bs-toggle="tab"
+              href="assets/convention.jpg"
+              role="tab"
+              >Exterior</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="first-tab"
+              data-bs-toggle="tab"
+              href="#first-floor"
+              role="tab"
+              >First Floor</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="second-tab"
+              data-bs-toggle="tab"
+              href="#second-floor"
+              role="tab"
+              >Second Floor</a
+            >
+          </li>
+        </ul>
+        <!-- Tab Content - Floor Maps -->
+        <div class="tab-content" id="venueTabContent">
+          <!-- Ground Floor -->
+          <div
+            class="tab-pane fade show active"
+            id="ground-floor"
+            role="tabpanel"
+          >
+            <div class="map-container">
+              <img
+                src="assets/convention-outside.png"
+                alt="Ground Floor Map"
+                class="img-fluid"
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>Ground Floor Facilities</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Main Entrance & Registration</li>
+                  <li class="list-group-item">Exhibition Hall (Rooms E1-E3)</li>
+                  <li class="list-group-item">Dining Hall & Catering</li>
+                  <li class="list-group-item">Networking Lounge A</li>
+                  <li class="list-group-item">Meeting Rooms G1-G4</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Amenities</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Information Desk</li>
+                  <li class="list-group-item">Coat Check</li>
+                  <li class="list-group-item">Restrooms</li>
+                  <li class="list-group-item">Coffee Stations</li>
+                  <li class="list-group-item">First Aid Station</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- First Floor -->
+          <div class="tab-pane fade" id="first-floor" role="tabpanel">
+            <div class="map-container">
+              <img
+                src="assets/convention-first.png"
+                alt="First Floor Map"
+                class="img-fluid"
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>First Floor Facilities</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Main Auditorium</li>
+                  <li class="list-group-item">Workshop Rooms A1-A4</li>
+                  <li class="list-group-item">Speakers' Lounge</li>
+                  <li class="list-group-item">Networking Lounge B</li>
+                  <li class="list-group-item">Press Room</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Amenities</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Restrooms</li>
+                  <li class="list-group-item">Charging Stations</li>
+                  <li class="list-group-item">Water Fountains</li>
+                  <li class="list-group-item">Coffee Stations</li>
+                  <li class="list-group-item">Tech Support Desk</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Second Floor -->
+          <div class="tab-pane fade" id="second-floor" role="tabpanel">
+            <div class="map-container">
+              <img
+                src="assets/convention-second.png"
+                alt="Second Floor Map"
+                class="img-fluid"
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>Second Floor Facilities</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Workshop Rooms B1-B6</li>
+                  <li class="list-group-item">Breakout Session Rooms</li>
+                  <li class="list-group-item">Grand Ballroom</li>
+                  <li class="list-group-item">Outdoor Terrace</li>
+                  <li class="list-group-item">VIP Lounge</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Amenities</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Restrooms</li>
+                  <li class="list-group-item">Quiet Rooms</li>
+                  <li class="list-group-item">Phone Booths</li>
+                  <li class="list-group-item">Coffee Stations</li>
+                  <li class="list-group-item">Charging Stations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </li>
+  </ul>
+</div>
+<div>
+ <p class="text-center text-white mb-3"> All rights reserved.</p>
+</div>
+</footer>
+
+ <script src="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+</html>

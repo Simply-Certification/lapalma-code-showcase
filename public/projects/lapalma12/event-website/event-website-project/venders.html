@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026 Gem & Mineral Show</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/googlefonts.css" />
+    <link rel="stylesheet" href="assets/googlefonts/orbitron.css" />
+    <link rel="stylesheet" href="assets/googlefonts/quicksand.css" />
+    <link rel="stylesheet" href="assets.css" />
+  </head>
+  <body>
+    <!-- Navigation will go here -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Gem & Mineral Show</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="buy.html">Buy Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="venders.html">Venders</a>
+            </li>
+
+            <!-- <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-white ms-lg-2"
+                href="venders.html"
+                >Venders</a
+              > -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header will go here -->
+    <header class="py-5 text-center bg-secondary text-white">
+      <div class="container">
+        <h1 class="display-4">Application for Venders</h1>
+        <p class="lead mb-4">February, 2026 • Convention Center</p>
+        <!-- <a href="venders.html" class="btn btn-light btn-lg">Venders</a> -->
+      </div>
+    </header>
+
+    <!-- Main content sections will go here -->
+
+    <!-- Light background section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Choose From</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <!-- <div>
+              <img
+                id="photo"
+                src="assets/convention-outside.png"
+                class="img-fluid border border-5 border-dark"
+                width="100%"
+              />
+            </div> -->
+            <div>
+              <img
+                id="photo"
+                src="assets/shopping.jpg"
+                class="img-fluid border border-5 border-dark"
+                width="100%"
+              />
+            </div>
+            <div class="Lots">
+            <h2>Inside Lots.</h2>
+            <p>$4000</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <img
+                id="photo"
+                src="assets/convention.jpg"
+                class="img-fluid border border-5 border-dark"
+                width="100%"
+              />
+            </div>
+            <div class="Lots2">
+            <h2>Outside Lots.</h2>
+            <p>$1500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark/alternate background section -->
+    <section class="py-5 bg-secondary">
+      <div class="container">
+        <h2 class="mb-4">Vender Application</h2>
+        <form>
+          <!-- Text input -->
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="first-name" class="form-control name" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="last-name" class="form-control name" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Business Name</label>
+            <input type="business-name" class="form-control name" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control email" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Social Security Number</label>
+            <input type="social-security" class="form-control Number" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input type="address" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Credit Card</label>
+            <input type="credit-card" class="form-control" />
+          </div>
+
+
+           <!--Select dropdown-->
+           <label class="form-label">Select Venue Type</label>
+           <select class="form-select">
+            <option>Inside Lot</option>
+            <option>Outside Lot</option>
+          </select>
+          <br>
+
+          <!-- Textarea -->
+          <!-- <textarea class="form-control" rows="3"></textarea> -->
+
+          <!-- Checkbox -->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Check me when finished</label>
+            <button class="btn btn-success ms-3">Submit</button>
+          </div>
+
+          <!-- Toggle switch -->
+          <!-- <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" />
+            <label class="form-check-label">Toggle</label>
+          </div> -->
+        </form>
+
+        <p>All venders are on a first come, first awarded lot bases.</p>
+      </div>
+    </section>
+
+    <!-- Footer will go here -->
+
+    <footer class="py-4 text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Gem & Mineral Show</h5>
+            <p class="text-white">Venders welcome from around the world.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <h5>Contact</h5>
+        <a href="mailto:gemandmineralshow2026.com">gemandmineralshow2026.com</a>
+            <div class="icon-card">
+          <i class="bi bi-facebook"></i><a href="mailto:gemandmineralshow2026@facebook.com">gemandmineralshow2026@facebook.com</a>
+        </div>
+          </div>
+        </div>
+        <hr class="my-3" />
+        <p class="text-center text-white mb-0">
+          &copy; 2026 Gem & Mineral Show. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

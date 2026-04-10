@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    color: ghostwhite;
+     background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(190deg,red,rgb(162, 0, 255) 7%,rgb(0, 0, 0) 10%);
+    
+}
+
+.container {
+    max-width: 800px;
+    background-color: darkgoldenrod;
+     border: 2px solid red;
+  border-radius: 8px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     border: 2px solid red;
+  border-radius: 8px;
+
+}
+
+.log {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+     border: 2px solid red;
+  border-radius: 8px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+     border: 2px solid red;
+  border-radius: 8px;
+}
+
+.btn {
+    padding: 3px;
+    margin: 0 5px;
+    box-shadow: 5px 5px;
+    background-color: darkred
+    
+
+}
+
+.grab {cursor: -webkit-grab; cursor: grab;}

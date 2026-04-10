@@ -1,0 +1,88 @@
+body {
+  background-image: url(assets/photo-1621329109234-d7657d2f3846.jpg);
+
+  background-size: 100%;
+}
+header {
+  /* background-image: url(assets/photo-1678245687839-231ed039a18b.jpg); */
+  background-color: black;
+}
+.display-4 {
+  color: crimson;
+  text-shadow: 6px 3px 0 black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.img-fluid {
+  border: 4px secondary;
+  border-radius: 35%;
+  border-left: 5px purple;
+  align-items: center;
+}
+.btn {
+  color: rgb(196, 184, 24);
+}
+h2 {
+  text-align: center;
+  color: rgb(223, 8, 8);
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 1rem;
+}
+h3 {
+  text-align: center;
+  color: rgb(201, 25, 25);
+  text-shadow: 1px 1px 3px black;
+  padding-top: 1rem;
+}
+
+.section-title {
+  color: rgb(179, 44, 44);
+}
+
+.photo {
+  align-items: center;
+}
+.price {
+  display: block;
+  justify-content: center;
+  align-content: center;
+}
+h5 {
+  text-align: center;
+}
+p {
+  color: aquamarine;
+  text-shadow: 1px 2px 1px black;
+  text-align: center;
+}
+
+.col {
+  align-items: center;
+  justify-content: center;
+}
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 2rem;
+  color: black;
+}
+.Lots {
+  text-align: center;
+  color: rgb(25, 223, 58);
+  background-color: rgb(27, 8, 8);
+  font-size: x-large;
+  text-shadow: 3px 2px 0px black;
+  margin-top: 5px;
+}
+.Lots2 {
+  color: rgb(79, 129, 187);
+  background-color: rgb(15, 2, 2);
+  text-align: center;
+  font-size: x-large;
+  text-shadow: 2px 2px 0px black;
+  margin-top: 5px;
+}
+footer {
+  color: aliceblue;
+  /* background-image: url(assets/photo-1705575463786-474f9271b1e1.jpg); */
+  text-shadow: 3px 2px 0 black;
+  background-color: black;
+}

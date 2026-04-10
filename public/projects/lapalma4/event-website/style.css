@@ -1,0 +1,57 @@
+.maincontainer {
+    background-image: url(assets/waterpark.jpg);
+    background-size: cover;
+}
+.pool {
+    background-image: url(assets/poolparty.jpg);
+    background-size: contain; 
+
+}
+.homehero {
+    background-image: url(assets/flamingo.jpg);
+    background-size: cover;
+}
+.water {
+    background-image: url(assets/water.jpg);
+    background-size: cover;
+}
+
+.preformerspage{
+
+    background-image: url(assets/beatheat.jpg);
+}
+.bigemoji {
+    font-size: 64px;
+}
+.schedule {
+    background-image: url(assets/houseparty.jpg);
+    background-size: cover;
+}
+.jumpman {
+    background-image: url(assets/jumpman.jpg);
+}
+.carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-image: none;
+      }
+      .carousel-control-prev i,
+      .carousel-control-next i {
+        font-size: 2rem;
+        color: black;
+      }
+      .carousel-item {
+        height: 400px;
+        background-color: #6c757d;
+      }
+      .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+      .duck {
+        background-image: url(assets/duck.jpg);
+        background-size: cover;
+      }
+      .poolparty {
+        background-image: url(assets/poolparty.jpg);
+      }

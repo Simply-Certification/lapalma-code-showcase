@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive ToDo App</title>
+    <!-- Bootstrap 5 CSS CDN if using Bootstrap -->
+    <!-- Bootstrap CSS for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons (optional) for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body class="py-5 bg-dark text-white">
+    
+<div class="container1">
+  
+<hr>
+<h2>ToDo List</h2>
+<hr>
+    <ul>
+      <li class="dropdown">
+        <a href="">Home</a>
+      </li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+</div>
+  <div class="container my-5">  
+      <h1 class="text-center mb-4"><span class="paperclip" style='font-size:100px;'>&#128206;</span><span>INTERACTIVE ToDo APP</span><span style='font-size:100px;'>&#128206;</span></h1>
+      <!-- Add Todo Form -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Add New ToDo</h2>
+          <form id="todoForm">
+            <div class="mb-3">
+              <label for="task" class="form-label">Task Description</label>
+              <input type="text" class="form-control" id="task" required />
+            </div>
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date</label>
+              <input type="date" class="form-control" id="dueDate" required />
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="completed" />
+              <label class="form-check-label" for="completed">Completed</label>
+            </div>
+            <button type="submit" class="button3">Add Todo</button>
+          </form>
+        </div>
+      </div>
+      <!-- Todo List -->
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h4 mb-3"id="listBody">Todo List</h2>
+          <ul id="todoList" class="list-group"></ul>
+        </div>
+      </div>
+      <!-- Log Area -->
+      <!-- <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Activity Log</h2>
+          <div id="log" class="log"></div>
+        </div>
+      </div>
+    </div> -->
+       <!-- Log Area -->
+        <div class="activity-log">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Activity Log</h2>
+          <div id="log" class="log"></div>
+        </div>
+      </div>
+    
+
+
+
+<div id="modal" class="modal-overlay">
+  <div class="modal-box">
+    <button id="closeBtn" class="modal-close">×</button>
+          <!-- Edit Todo Form -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Edit ToDo</h2>
+          <!-- <form id="newTodoForm"> -->
+            <div class="mb-3">
+              <label for="task" class="form-label">Task Description</label>
+              <input type="text" class="form-control" id="newTask" required />
+            <span id="alert" class="alert">At least 2 or more characters!</span>
+          </div>
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date</label>
+              <input type="date" class="form-control" id="newDueDate" required />
+             <span id="alert2" class="alert">Select Due Date!</span>
+           </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="newCompleted" />
+              
+              <label class="form-check-label" for="completed">Completed</label>
+            </div>
+            <button id="editId" class="button3">Update</button>
+          <!-- </form> -->
+        </div>
+      </div>
+  
+  </div>
+</div>
+    </div>
+    <!-- <span class="clippy">&#128206;</span> -->
+    <!-- Bootstrap JS Bundle for Restricted Environment -->
+    <script src="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Axios CDN -->
+    <script src="axios.min.js"></script>
+    <!-- Custom JavaScript -->
+
+    <script src="todo.js"></script>
+  </body>
+</html>

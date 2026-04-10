@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Todo App</title>
+
+
+       <link href="googlefonts/quicksand.css" />
+    <!-- Bootstrap CSS for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (optional) for Restricted Environment -->
+    <link
+      href="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap-icons.css"
+      rel="stylesheet"
+    /> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Interactive Todo App</h1>
+      <!-- Add Todo Form -->
+      <div class="card mb-4">
+        <div class="card-body mb-5">
+          <h2 class="h4 mb-3">Add New Todo</h2>
+          <form id="todoForm">
+            <div class="mb-3">
+              <label for="task" class="form-label">Task Description</label>
+              <input type="text" class="form-control" id="task" required />
+            </div>
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date</label>
+              <input type="date" class="form-control" id="dueDate" required />
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="completed" />
+              <label class="form-check-label" for="completed">Completed</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Todo</button>
+          </form>
+        </div>
+      </div>
+      <!-- Todo List -->
+      <div class="card">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Todo List</h2>
+          <ul id="todoList" class="list-group"></ul>
+        </div>
+      </div>
+      <!-- Log Area -->
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="h4 mb-3">Activity Log</h2>
+          <div id="log" class="log"></div>
+        </div>
+      </div>
+    </div>
+
+   <footer class="p-4">
+      <h3><u>Contact Us:</u></h3>
+      <div class="row w-50 mx-auto">
+        <div class="col">
+          <button class="btn btn-light">
+            <p class="bi-twitter text-primary text-center h4"></p>
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn btn-light">
+            <p class="bi-instagram text-warning text-center h4"></p>
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn btn-light">
+            <p class="bi-linkedin text-info text-center h4"></p>
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn btn-light">
+            <p class="bi-google text-danger text-center h4"></p>
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn btn-light">
+            <p class="bi-facebook text-primary text-center h4"></p>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+<div id="myModal"></div>
+       <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <!-- Bootstrap 5 JS CDN if using Bootstrap -->
+  <!-- Bootstrap JS Bundle for Restricted Environment -->
+    <script src="https://sc-course-materials.s3.us-west-2.amazonaws.com/v2/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Axios CDN -->
+    <script src="axios.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    
+      
+    </div>
+  </body>
+</html>

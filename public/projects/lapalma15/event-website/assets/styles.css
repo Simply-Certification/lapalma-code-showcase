@@ -1,0 +1,277 @@
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/header-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  margin-bottom: 40px;
+}
+.custom-card {
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+.highlight-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #5c4fb9;
+}
+.page-header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+.venue-img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.facility-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #5c4fb9;
+}
+.map-container {
+  height: 400px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #dee2e6;
+  position: relative;
+  overflow: hidden;
+}
+.venue-card {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+  height: 100%;
+}
+.venue-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.accommodation-card {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 100%;
+}
+.section-title {
+  border-bottom: 2px solid #5c4fb9;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.transport-icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #5c4fb9;
+}
+
+.white-link {
+  color: white;
+  text-decoration: none;
+}
+.white-link:hover {
+  color: rgb(210, 247, 242);
+}
+.nav-tabs .nav-link {
+  border: none;
+  color: #495057;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+}
+.nav-tabs .nav-link.active {
+  border-bottom: 3px solid #5c4fb9;
+  color: #5c4fb9;
+}
+.tab-content {
+  padding: 20px 0;
+}
+.speaker-card {
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+  height: 100%;
+}
+.speaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.speaker-img {
+  height: 260px;
+  object-fit: cover;
+}
+.filter-buttons {
+  margin-bottom: 30px;
+}
+.social-icon {
+  color: #5c4fb9;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.track-badge {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.speaker-featured {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffc107;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.day-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-left: 5px solid #5c4fb9;
+}
+.schedule-table {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+.session-ai {
+  border-left: 4px solid #007bff;
+}
+.session-blockchain {
+  border-left: 4px solid #28a745;
+}
+.session-ux {
+  border-left: 4px solid #fd7e14;
+}
+.session-cloud {
+  border-left: 4px solid #6f42c1;
+}
+.session-keynote {
+  border-left: 4px solid #dc3545;
+  background-color: rgba(220, 53, 69, 0.05);
+}
+.session-workshop {
+  background-color: rgba(0, 123, 255, 0.05);
+}
+.session-panel {
+  background-color: rgba(40, 167, 69, 0.05);
+}
+.section-title {
+  border-bottom: 2px solid #5c4fb9;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.ticket-card {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  height: 100%;
+}
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.ticket-card.featured {
+  border: 2px solid #5c4fb9;
+  box-shadow: 0 5px 15px rgba(92, 79, 185, 0.2);
+}
+.ticket-header {
+  padding: 15px;
+  color: white;
+}
+.standard-ticket .ticket-header {
+  background-color: #5c4fb9;
+}
+.premium-ticket .ticket-header {
+  background-color: #2c3e50;
+}
+.vip-ticket .ticket-header {
+  background-color: #c0392b;
+}
+.workshop-pass .ticket-header {
+  background-color: #27ae60;
+}
+.ticket-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.ticket-price .original-price {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.feature-icon {
+  color: #5c4fb9;
+  margin-right: 8px;
+}
+.form-section {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.feature-included {
+  color: #28a745;
+}
+.feature-excluded {
+  color: #dc3545;
+  text-decoration: line-through;
+}
+.form-floating > label {
+  color: #666;
+}
+.badge-early {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffc107;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 0 8px 0 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.timeline-item {
+  padding-left: 30px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5c4fb9;
+}
+.timeline-item:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 15px;
+  bottom: 0;
+  width: 1px;
+  background-color: #5c4fb9;
+}
+.timeline-item:last-child:after {
+  display: none;
+}

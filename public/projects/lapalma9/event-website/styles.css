@@ -1,0 +1,51 @@
+body {
+    background-image: url(assests/grape.jpg);
+    background-size: cover;
+}
+.title {
+  text-shadow:4px 4px 4px;
+}
+ h1 {
+    background-color: gray;
+    color: black;
+    text-shadow:4px 4px 4px white;
+    font-size: 4rem;
+ }
+
+p {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+}
+.spin1 {
+  top: -21px;
+  position: absolute;
+  z-index: -1;
+  height: 2000px;
+  width: 100vw;
+  overflow: hidden;
+  border: 3px solid green;
+}
+
+
+.spin-background {
+  background: url(assests/grape.jpg);
+  background-size: auto;
+  margin-bottom: 0;
+  height: 750vh;
+  width: 750vh;
+  position: absolute;
+  transform: scale(4);
+  top: -300vh;
+  left: -300vh;
+  animation: spin 100s linear infinite;
+  z-index: -100;
+}
+
+@keyframes spin { from { transform:rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}

@@ -1,0 +1,120 @@
+body, html {
+  height: 100%;
+  /* overflow:scroll; */
+  caret-color: transparent;
+  
+}
+
+.parallax1 {
+  background-image: url(photo-1727200449974-5221973023d0.jpg);
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax2 {
+  background-image: url(photo-1724376763727-df500e6bad63.png);
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  background-image: url(photo-1727200449974-5221973023d0.jpg);
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.creature-card {
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  font-size: 20px;
+  height:700px;
+  width: 200px
+}
+.creature-card2 {
+  
+  border-radius: 15px;
+  height: 700px;
+  width: 1000px;
+  padding: 2rem;
+  backdrop-filter: blur(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.creature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.container {
+  position:fixed;
+  display: grid;
+  font-family: quicksand;
+  color: rgb(255, 255, 255);
+  height: 500px;
+  padding: 0 2rem;
+}
+
+.log {
+  color: black;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid rgb(245, 250, 238);
+    border-radius: 5px;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+
+}
+button{
+  background-color: black;
+  font-family: quicksand;
+  color: hsl(84, 100%, 59%);
+  border: none;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 1px;
+  cursor: pointer;
+  border-radius: 10px;
+  }
+
+  button:hover {
+  background-color: greenyellow;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: block;
+  }
+  .creature-grid {
+    grid-template-columns: 1fr;
+  }
+  .parallax1 .parallax2 .parallax3 {
+    background-attachment: unset;
+
+  }
+  body{
+    scroll-behavior: auto;
+  }
+}

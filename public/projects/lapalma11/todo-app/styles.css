@@ -1,0 +1,42 @@
+body {
+  background-image: url(Assets/pexels-photo-7005399.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 400px;
+}
+h1 {
+  color: rgb(83, 82, 80);
+  text-shadow: 0 9px 4px white;
+}
+.card {
+  background-color: bisque;
+  border-radius: 50px;
+  box-shadow: 0 9px 4px white;
+}
+
+.log {
+  max-height: 120px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.btn {
+  margin: 0 5px;
+}
+
+.form-control {
+  display: block;
+  width: 45%;
+}

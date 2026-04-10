@@ -1,0 +1,294 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #575757, #0a0a0a, #2e2f30, #0c0c0c);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  color: #f1efef;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.paperclip {
+  animation-name: pulse;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+
+}
+.container1 {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  position: absolute;
+}
+hr {
+  color: yellow;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+
+  background-color: black;
+  border-radius: 10px;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: rgb(111, 126, 23);
+  color: white;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(111, 126, 23);
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+.container {
+  max-width: 800px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  border: solid 5px rgb(104, 104, 6);
+  color: white;
+}
+.activity-log {
+  position: absolute;
+  top: 146px;
+  right: 20px;
+  width: 300px;
+}
+.log {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: black;
+}
+li {
+  color: white;
+}
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listHr {
+  width: 700px;
+  border: 2px solid rgb(104, 104, 6);
+  margin: 20px;
+}
+
+.btn {
+  margin: 0 5px;
+}
+
+.editform {
+  display: none;
+}
+
+/* The overlay (background) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Show the modal */
+.modal-overlay.show {
+  display: block;
+}
+
+/* The modal box */
+.modal-box {
+  background: rgb(10, 10, 10);
+  width: 90%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.editBtn {
+  position: absolute;
+
+  margin-left: 460px;
+  background-color: yellow;
+  border: 2px solid darkgoldenrod;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: 700;
+  color: darkgoldenrod;
+}
+
+.editBtn:hover {
+  cursor: pointer;
+  background-color: darkgoldenrod;
+  border: 3px solid yellow;
+  color: yellow;
+}
+.deleteBtn {
+  position: absolute;
+
+  margin-left: 500px;
+  background-color: rgb(248, 9, 9);
+  border: 2px solid rgb(49, 2, 2);
+  border-radius: 20px;
+  width: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(12, 12, 12);
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+  background-color: rgb(49, 2, 2);
+  border: 3px solid rgb(248, 9, 9);
+  color: rgb(248, 9, 9);
+}
+.button3 {
+  background-color: yellow;
+  border: 2px solid darkgoldenrod;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: 700;
+  color: darkgoldenrod;
+}
+
+.button3:hover {
+  cursor: pointer;
+  background-color: darkgoldenrod;
+  border: 3px solid yellow;
+  color: yellow;
+}
+
+.thumbs {
+  position: flex;
+  margin-left: 170px;
+  font-size: 30px;
+}
+.thumbs:hover {
+  cursor: pointer;
+  position: flex;
+  margin-left: 170px;
+  font-size: 31px;
+}
+.alert.show {
+  color: red;
+}
+.alert {
+  color: black;
+}
+
+/* .clippy {
+  position: flex;
+  border-radius: 60px;
+  font-size: 40px;
+  background: linear-gradient(-45deg, #0ccf5e, #55f30c, #939b25, #c7f304);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+  color: #f1efef;
+  line-height: 1.6;
+  min-height: 100vh;
+} */
+.listBody {
+  position: flex;
+  margin-left: 600px;
+}
+.emoji1 .emoji2 .emoji3  {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: float-up 2s forwards;
+  pointer-events: none;
+}
+.emoji1  {
+  position: absolute;
+  margin-left: 300px;
+  color: red;
+  text-align: center;
+}
+.emoji2 {
+  position: absolute;
+  margin-left: 400px;
+  text-align: center;
+  color: orange;
+}
+.emoji3 {
+  position: absolute;
+  margin-left: 450px;
+  text-align: center;
+  color: green;
+
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}

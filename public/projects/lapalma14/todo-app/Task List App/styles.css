@@ -1,0 +1,65 @@
+body {
+  font-family: cursive;
+   background-color: white;
+  background-image: url(hexagonal-tech-background-blue-vector-45674203.avif);
+}
+h1 {
+  font-family: "lobster";
+  color: white;
+  text-shadow: 3px 3px 3px blue;
+}
+.container {
+  max-width: 800px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: solid rgb(2, 2, 126) 5px;
+  background-color: rgb(129, 200, 202);
+}
+
+.log {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px; 
+  
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  max-width: calc(100% - 120px);
+  border: solid rgb(2, 2, 126) 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.list-group-item:hover {
+  background-color: rgb(113, 213, 243);
+  transform: translateY(-5px);
+  border: solid rgb(2, 2, 126) 3px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.list-group .btn {
+  margin: 10px;
+}
+.list-group .edit-btn {
+  position: absolute;
+  right: -70px;
+}
+.list-group .delete-btn {
+  position: absolute;
+  right: -125px;
+}
+.btn {
+  margin: 0 5px;
+}
+
+#logCard {
+  margin: auto;
+  max-width: 780px;
+}
